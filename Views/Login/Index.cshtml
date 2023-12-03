@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/bubbles.css" asp-append-version="true" />
+    
+</head>
+<body class="position-relative">
+    <div class="bubbles position-absolute">
+        <span style="--i:11;" ></span>
+        <span style="--i:12;" ></span>
+        <span style="--i:23;" ></span>
+        <span style="--i:10;" ></span>
+        <span style="--i:14;" ></span>
+        <span style="--i:23;" ></span>
+        <span style="--i:18;" ></span>
+        <span style="--i:16;" ></span>
+        <span style="--i:19;" ></span>
+        <span style="--i:20;" ></span>
+        <span style="--i:22;" ></span>
+        <span style="--i:25;" ></span>
+        <span style="--i:18;" ></span>
+        <span style="--i:21;" ></span>
+        <span style="--i:15;" ></span>
+        <span style="--i:13;" ></span>
+        <span style="--i:26;" ></span>
+        <span style="--i:17;" ></span>
+        <span style="--i:13;" ></span>
+        <span style="--i:28;" ></span>
+        <span style="--i:11;" ></span>
+        <span style="--i:12;" ></span>
+        <span style="--i:23;" ></span>
+        <span style="--i:10;" ></span>
+        <span style="--i:14;" ></span>
+        <span style="--i:23;" ></span>
+        <span style="--i:18;" ></span>
+        <span style="--i:16;" ></span>
+        <span style="--i:19;" ></span>
+        <span style="--i:20;" ></span>
+        <span style="--i:22;" ></span>
+        <span style="--i:25;" ></span>
+        <span style="--i:18;" ></span>
+        <span style="--i:21;" ></span>
+        <span style="--i:15;" ></span>
+        <span style="--i:13;" ></span>
+        <span style="--i:26;" ></span>
+        <span style="--i:17;" ></span>
+        <span style="--i:13;" ></span>
+        <span style="--i:28;" ></span>
+    </div>
+    <div class="themes position-absolute  flex justify-content-center align-items-center flex-column ">
+            <button id="day"></span>
+            <button id="gold"></span>
+            <button id="dark"></span>
+    </div>
+    <div class="landing flex justify-content-center align-items-center section">
+        <div class="container flex day">
+            <div class="flex flex-column align-items-center">
+                <h1>Login</h1>
+                @if (ViewBag.ErrorMessage == true)
+                {
+                    <div class="alert alert-primary text-center pl-2 pr-2" role="alert">
+                        Username or Password is Incorrect
+                    </div>
+                }
+                <form asp-action="Login" asp-controller="Login" class="flex flex-column">
+                    
+                    <div class="inputs flex-column">
+                        <label for="">Username</label>
+                        <div class="flex">
+                            <input name="Username" type="text" required placeholder="Username..." >
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                    </div> 
+                    
+                    <div class="inputs flex-column">
+                        <label for="">Password</label>
+                        <div class="flex">
+                            <input type="password" required placeholder="Password..." name="Password">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        </div>
+                        
+                    <div class="submit justify-content-center align-items-center">
+                        <input type="submit" name="" id="">
+                    </div>
+                </form>
+                <h6>Dont Have Account <span>SignUpNow</span></h6>
+                <div class="submit justify-content-center align-items-center">
+                    <a asp-action="Index" asp-controller="SIgnUp">Signup</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/8741f503b5.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

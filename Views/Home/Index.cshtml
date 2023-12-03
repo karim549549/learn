@@ -1,0 +1,381 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Home Page</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,
+                      400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/assets/vendor/animate.css/animate.min.css" rel="stylesheet" asp-append-version="true">
+    <link href="~/assets/vendor/aos/aos.css" rel="stylesheet" asp-append-version="true">
+    <!--     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+
+    <link href="~/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" asp-append-version="true">
+    <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" asp-append-version="true">
+    <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" asp-append-version="true">
+
+    <!-- Template Main CSS File -->
+    <link href="~/css/Home.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex justify-content-between">
+
+            <div class="logo">
+                <h1 class="text-light"><a href="index.html">Book It Easy</a></h1>
+            </div>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="active" asp-action="Index" asp-controller="Home">Home</a></li>
+                    <!--  <li><a asp-action="Index" asp-controller="Contact">About us</a></li> -->
+                    <li><a asp-action="Index" asp-controller="Services">Services</a></li>
+                    <li><a asp-action="Index" asp-controller="Trending">Trending destinations</a></li>
+
+                    <li class="dropdown">
+                        <a href="#"><span>Join Us</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a asp-action="Index" asp-controller="Login">Log Out</a></li>
+                        </ul>
+                    </li>
+                    <li><a asp-action="Index" asp-controller="Contact">Contact us</a></li>
+                    @if (ViewBag.Admin == true)
+                    {
+                        <li><a asp-action="Index" asp-controller="Dash">Admin</a></li>
+                    }
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+            <div class="carousel-inner" role="listbox">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg);">
+                    <div class="carousel-container">
+                        <div class="carousel-content animate__animated animate__fadeInUp">
+                            <h2>Welcome to <span>Book It Easy :</span></h2>
+                            <p>
+                                Step into the world of Book It Easy, where every visit is the start of a thrilling adventure! Explore the seamless booking experience,
+                                revel in unmatched convenience, and create memories with unforgettable experiences. Together, let's transform your plans into a vivid reality,
+                                crafting moments that linger in your heart long after the journey ends !
+                            </p>
+                            <div class="text-center"><a href="about.html" class="btn-get-started">Read More</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg);">
+                    <div class="carousel-container">
+                        <div class="carousel-content animate__animated animate__fadeInUp">
+                            <h2>Book It Easy :</h2>
+                            <p>
+                                Step into a world of effortless reservations with Book it Easy. Your journey starts here! Explore a hassle-free booking
+                                experience and unlock a world of possibilities. We're thrilled to be a part of your travel story!
+                            </p>
+                            <div class="text-center"><a href="about.html" class="btn-get-started">Read More</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg);">
+                    <div class="carousel-container">
+                        <div class="carousel-content animate__animated animate__fadeInUp">
+                            <h2>Book It Easy :</h2>
+                            <p>
+                                At Book It Easy, we're dedicated to turning your dreams into reservations.
+                                Enjoy the ease of planning and the excitement of anticipation. Your perfect getaway is just a click away!
+                            </p>
+                            <div class="text-center"><a href="about.html" class="btn-get-started">Read More</a></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bx bx-left-arrow" aria-hidden="true"></span>
+            </a>
+
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bx bx-right-arrow" aria-hidden="true"></span>
+            </a>
+
+            <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= Cta Section ======= -->
+        <section id="cta" class="cta">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-9 text-center text-lg-left">
+                        <h3>We've facilitated over <span>200 eservations </span>this year!</h3>
+                        <p>
+                            Immerse yourself in the ease of booking as we take you on a journey where every detail is meticulously crafted.
+                            Our commitment ensures that your experience transcends the ordinary—no reservations about it. We understand the importance of seamless planning,
+                            leaving you free to savor the moments, as we handle the rest. Your satisfaction is our priority,
+                        </p>
+                    </div>
+                    <div class="col-lg-3 cta-btn-container text-center">
+                        <a class="cta-btn align-middle" href="#">Book Now</a>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Cta Section -->
+        <!-- ======= to do Section ======= -->
+        <section id="services" class="services">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon-box" data-aos="fade-up">
+                            <div class="icon"><i class="bi bi-briefcase"></i></div>
+                            <h4 class="title"><a href="">Your Job:</a></h4>
+                            <p class="description">
+                                Ensure that your work commitments and schedule align with your travel plans.
+                                Communicate with your employer or team about your intended time off.
+                                Complete any pending tasks or responsibilities.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                            <div class="icon"><i class="bi bi-card-checklist"></i></div>
+                            <h4 class="title"><a href="">Important Tasks:</a></h4>
+                            <p class="description">
+                                Prioritize and complete any crucial tasks before your departure.
+                                Make a checklist of essential responsibilities and deadlines to manage before and after your trip.
+                                Delegate tasks if needed.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                            <div class="icon"><i class="bi bi-brightness-high"></i></div>
+                            <h4 class="title"><a href="">Check the Weather:</a></h4>
+                            <p class="description">
+                                Research the weather conditions at your destination during the planned travel dates.
+                                Pack accordingly, considering the forecast, to ensure you are prepared for various weather scenarios.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Services Section -->
+        <!-- ======= Portfolio Section ======= -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+
+                <div class="row" data-aos="fade-up">
+                    <div class="col-lg-12 d-flex justify-content-center">
+                        <ul id="portfolio-flters">
+                            <li data-filter="*" class="filter-active">All</li>
+                            <li data-filter=".filter-app">Hotels</li>
+                            <li data-filter=".filter-card">Airlines</li>
+                            <li data-filter=".filter-web">Cities</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row portfolio-container" data-aos="fade-up">
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Hotels</h4>
+                            <p>Hotels</p>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Cities</h4>
+                            <p>Cities</p>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Hotels</h4>
+                            <p>Hotels</p>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                        <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Airlines</h4>
+                            <p>Airlines</p>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Cities</h4>
+                            <p>Cities</p>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Hotels</h4>
+                            <p>Hotels</p>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                        <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Airlines</h4>
+                            <p>Airlines</p>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                        <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Airlines</h4>
+                            <p>Airlines</p>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Cities</h4>
+                            <p>Cities</p>
+                            <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Portfolio Section -->
+        <!-- ======= Our Clients Section ======= -->
+        <section id="clients" class="clients">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Our <strong>Clients</strong></h2>
+                    <p>At Book It Easy, we are proud to spotlight dynamic partners in our industry . With a commitment to excellence and a passion , We stand out as leaders Together.</p>
+                </div>
+
+                <div class="row no-gutters clients-wrap clearfix" data-aos="fade-up">
+
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <div class="client-logo">
+                            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <div class="client-logo">
+                            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <div class="client-logo">
+                            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <div class="client-logo">
+                            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <div class="client-logo">
+                            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <div class="client-logo">
+                            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <div class="client-logo">
+                            <img src="assets/img/clients/client-7.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-xs-6">
+                        <div class="client-logo">
+                            <img src="assets/img/clients/client-8.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Our Clients Section -->
+
+    </main><!-- End #main -->
+
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="~/assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="~/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

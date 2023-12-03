@@ -1,0 +1,236 @@
+﻿body {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.darkimg {
+    max-width: 200px;
+    max-width: 200px;
+    left: -75px;
+    top: -106px;
+}
+
+.bubbles {
+    z-index: 0 !important;
+}
+
+.themes {
+    width: 71px;
+    height: 150px;
+    left: 0px;
+    top: 100px;
+    border-radius: 0rem 1rem 1rem 0rem;
+    padding: 20px;
+    gap: 10px;
+    background: linear-gradient(-225deg, #fdd114 39%, #ff2d75 88%, rgb(2, 2, 61,1) 11%);
+}
+
+    .themes button:nth-child(1) {
+        background-color: #ff2d75;
+        box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75
+    }
+
+    .themes button:nth-child(2) {
+        background-color: #fdd114;
+        box-shadow: 0 0 0 10px #fdd11444, 0 0 50px #fdd114, 0 0 100px #fdd114;
+    }
+
+    .themes button:nth-child(3) {
+        background-color: #02023D;
+    }
+
+    .themes button {
+        background-color: black;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        transition: 0.3s;
+        border: 0;
+        outline: 0;
+    }
+
+        .themes button:focus {
+            outline: 0;
+            border: 0;
+            transform: scale(1.4);
+        }
+
+        .themes button:hover {
+            transform: scale(1.4);
+        }
+
+.section {
+    min-height: 100vh;
+}
+
+.landing {
+    z-index: -1;
+    background: linear-gradient(-211deg, rgb(71, 59, 123) 25%, rgb(53, 132, 167) 66%, rgb(48, 210, 190) 88%);
+    text-transform: capitalize;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.landing .container {
+    position: relative;
+    z-index: 2;
+    padding: 50px;
+    width: fit-content;
+    overflow: hidden;
+    border-radius: 1.25rem;
+    background-color: white;
+    min-height: 440px;
+}
+
+    .landing .container::before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 7%;
+        background-color: #4fc3dc;
+        top: 9px;
+        left: -44px;
+        transform: rotateZ(-39deg);
+        box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+        transition: 0.3s;
+        z-index: -1;
+    }
+
+    .landing .container::after {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 7%;
+        bottom: 9px;
+        right: -45px;
+        transform: rotateZ(-39deg);
+        transition: 0.3s;
+        z-index: -1;
+    }
+
+.day::after {
+    background-color: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+}
+
+.gold::after {
+    background-color: #fdd114;
+    box-shadow: 0 0 0 10px #fdd11444, 0 0 50px #fdd114, 0 0 100px #fdd114;
+}
+
+.dark::after {
+    background-color: #050531;
+    box-shadow: 0 0 0 10px #05053144, 0 0 50px #050531, 0 0 100px #050531;
+}
+
+.landing .container:hover::After {
+    transform: rotateZ(-39deg) scale(8);
+}
+
+.landing .container:hover::before {
+    transform: rotateZ(-39deg) scale(8);
+}
+
+.landing .container h1 {
+    text-align: center;
+}
+
+.landing .container form {
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+    .landing .container form input {
+        border: 0px;
+        outline: 0px;
+        background: transparent;
+        color: rgb(90, 88, 88);
+    }
+
+.inputs {
+    position: relative;
+    padding: 5px 0px;
+    display: flex;
+}
+
+    .inputs div {
+        align-items: center;
+    }
+
+    .inputs label {
+        color: rgb(49, 48, 48);
+    }
+
+    .inputs::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: #4fc3dc;
+        bottom: 0;
+        left: 0;
+    }
+
+    .inputs i {
+        color: #ff2d75;
+    }
+
+    .inputs::after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 1px;
+        background-color: #ff2d75;
+        bottom: 0;
+        left: 0;
+        transition: 0.3s;
+    }
+
+    .inputs:hover::after {
+        width: 100%;
+    }
+
+.submit {
+    margin-top: 27px;
+    background: linear-gradient( -225deg, #1f91c2 0%, #3584a7 51%, #30d2be 100% );
+    display: flex;
+    width: fit-content;
+    border-radius: 2.25rem;
+    padding: 5px 21px;
+    transition: 0.3s;
+    font-size: 23px;
+}
+
+    .submit input {
+        color: white !important;
+    }
+
+    .submit:hover {
+        transform: scale(1.3);
+    }
+
+.flex {
+    display: flex;
+}
+
+.submit a {
+    color: white;
+}
+
+.landing .container h6 {
+    margin-top: 1rem;
+    color: #4a4a4a;
+}
+
+    .landing .container h6 span {
+        color: rgb(175, 175, 175);
+        font-weight: bold;
+    }

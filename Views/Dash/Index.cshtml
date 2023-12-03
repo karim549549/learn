@@ -1,0 +1,97 @@
+﻿@model MessageList
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/Table.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Aref+Ruqaa+Ink:wght@400;700&family=Cairo+Play:wght@300&family=Marhey&family=Roboto+Condensed:ital,wght@0,100;0,300;0,400;1,100;1,200;1,400;1,700;1,800;1,900&family=Vina+Sans&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex justify-content-between">
+
+            <div class="logo">
+                <h1 class="text-light"><a href="index.html">Book It Easy</a></h1>
+            </div>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="active" asp-action="Index" asp-controller="Home">Home</a></li>
+                    <!--  <li><a asp-action="Index" asp-controller="Contact">About us</a></li> -->
+                    <li><a asp-action="Index" asp-controller="Services">Services</a></li>
+                    <li><a asp-action="Index" asp-controller="Trending">Trending destinations</a></li>
+
+                    <li class="dropdown">
+                        <a href="#"><span>Join Us</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a asp-action="Index" asp-controller="Login">Log Out</a></li>
+                        </ul>
+                    </li>
+                    <li><a asp-action="Index" asp-controller="Contact">Contact us</a></li>
+                    @if (ViewBag.Admin == true)
+                    {
+                        <li><a asp-action="Index" asp-controller="Dash">Admin</a></li>
+                    }
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Services</h2>
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li>Services</li>
+                    <li>Reservation</li>
+                </ol>
+            </div>
+        </div>
+    </section><!-- End Breadcrumbs -->
+
+    <div class="landing flex justify-content-center align-items-center">
+        <div class="container pad1 flex justify-content-center align-items-center">
+            <table class="table table-striped MyBoxShadow">
+                <thead>
+                    <tr>
+                        <th scope="col">#ID</th>
+                        <th scope="col">Message</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">CustomerID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var message in Model.Messages)
+                    {
+                        <tr>
+                            <th scope="row-2">@message.Id</th>
+                            <td>@message.Message</td>
+                            <td>@message.Subject</td>
+                            <td>@message.CustomerId</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/8741f503b5.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
